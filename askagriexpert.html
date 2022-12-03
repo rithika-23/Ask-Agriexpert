@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASK AGRIEXPERT</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./askagriexpert.css">
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+
+    <script>
+    
+        function loadGoogleTranslate()
+    
+        {
+            new google.translate.TranslateElement("myid")
+        }
+    
+    </script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Agriexpert"
+      agent-id="ef2a1000-a200-4098-a9bb-a86c0d76aaf2"
+      language-code="en"
+    ></df-messenger>
+
+
+
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+    
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            
+          <a class="navbar-brand" href="#"> ASK AGRIEXPERT</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#tools"> Tools</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link " href="#schemes">Schemes</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " href="#prac">Practices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#faq">FAQS</a>
+              </li>
+            </ul>
+            <div id="myid"></div>
+            
+          </div>
+        </div>
+      </nav>
+
+    <!--corousel-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="1200ms">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="1200">
+        <img width="100%" src="https://fthmb.tqn.com/EtVcO1pBqnAXTSD5PxDDjpnUmFw=/2000x1333/filters:fill(auto,1)/organic_farmer-511153363-58a8cf813df78c345b479f74.jpg" class="d-block w-100 img_" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>It's more than a job, it's a way of life</h5>
+          
+        </div>
+      </div>
+      <div class="carousel-item " data-bs-interval="1200">
+        <img src="https://www.theindiaforum.in/sites/default/files/field/image/2022/06/21/ramkumar-radhakrishnan-wikimedia-1622193304-1622193304.jpeg" class="d-block w-100 img_" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>To most people it's dirt to farmer it's potential.</h5>
+        </div>
+      </div>
+      
+      <div class="carousel-item" data-bs-interval="1200">
+        <img src="https://www.treehugger.com/thmb/bdy-Pux_j_dV4wqbpGqSGkLXYjw=/1945x1296/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1134458291-e00cd853cfb9404aa5aa97b80e6eec7c.jpg" class="d-block w-100 img_" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Farming is a profession of hope</h5>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+
+    <div class="factors">
+        <!--  accepting number and displaying factors -->
+        <h4>Ask your query here..</h3>
+        <input type="text" id="text" placeholder="Enter query">
+        <button class="rounded inpBtn">GetAnswer</button>
+        <p id="sentence"></p>
+        <p class="result"></p>
+        <!--Javascript link-->
+        <script src="./sample.js"></script>
+    </div>
+
+
+    
+
+    <!--Steps-->
+    <div class="container steps">
+        <h3 class="mt-5 ">Phases of crop cultivation</h3>
+        <div class="row text-center mt-3 ">           
+            <div class="col-sm-2 p-1">
+                <div class="card1">
+                    <img width =" 100%" height="150px" class="rounded"src="https://st2.depositphotos.com/34818944/48931/i/450/depositphotos_489316676-stock-photo-indian-farmer-ploughing-bull-his.jpg" alt="">                    
+                        <h5>Land preperation</h2>
+                        <p >The soil having pH 5-7 is considered good for its cultivation. The land should be leveled after every ploughing and apply enough cow dung .   </p>
+                </div>
+
+            </div>
+            <div class="col-sm-2 p-1">
+                <div class="card1">
+                    <img width =" 100%" height="150px" class="rounded"src="https://i0.wp.com/agrinfobank.com.pk/wp-content/uploads/2019/11/wheat-sowing.jpg?fit=1200%2C675&ssl=1" alt="">
+                        <h5>Sowing</h2>
+                        <p >The seeds are dropped into furrow lines in a continuous flow & are covered with soil. The seeds must be sown at proper depths & spaces  </p>
+                     
+                </div>
+            </div>
+            <div class="col-sm-2 p-1">
+                <div class="card1">
+                    <img width =" 100%" height="150px" class="rounded"src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-276264,resizemode-1,msid-75431711/news/economy/agriculture/record-fertiliser-sales-witnessed-during-lockdown.jpg" alt="">  
+                        <h5>Fertilizing </h2>
+                        <p>15 to 30 lb. N per acre is recommended to be sprayed either before or at the time of seeding. The remaining fertilizer N should be top dressed.</p>                </div>
+                
+            </div>
+            <div class="col-sm-2 p-1">
+                <div class="card1">
+                    <img width =" 100%" height="150px" class="rounded"src="https://thumbs.dreamstime.com/b/irrigation-wheat-1734513.jpg" alt="">
+                        <h5>Irrigation</h2>
+                        <p>The crop requires 4 - 6 irrigations depending on the soil type and rainfall. Water stagnation should be avoided at the time of germination.</p>
+                    
+                </div>
+            </div>
+            <div class="col-sm-2 p-1">
+                <div class="card1">
+                    <img width =" 100%" height="150px" class="rounded"src="https://indiagardening.com/wp-content/uploads/2020/01/2Wheat-Producing-States-in-India.jpg" alt="">
+                        <h5>Harvesting</h2>
+                        <p> Once the crop is matured or fully ripen, they are cut and gathered. Harvesting includes reaping, threshing, cleaning, hauling and field drying.</p> 
+                     </div>
+                </div>
+                <div class="col-sm-2 p-1">
+                    <div class="card1">
+                        <img width =" 100%" height="150px" class="rounded"src="https://www.digitrac.in/pub/media/magefan_blog/Storage_min.jpg" alt="">
+                            <h5>Storage</h2>
+                            <p> To protect the crop, they have to store in closed containers. Farmers store them in metal containers or jute bags or in silos or granaries.</p> 
+                         </div>
+                    </div>
+        </div>
+           
+        </div>
+    
+    <!--FAQS-->
+    <div class="container mb-4" id="faq">
+        <h4 class="my-4">Frequently Asked Questions(FAQS)</h3>
+        <!--faq-1-->
+        <div class="faq">
+            <p class="mb-0 ">
+                <i class="fa fa-angle-double-right"></i>  How to improve the quality of soil?
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" >
+                <i class="fa fa-angle-down"></i>
+            </button>
+            </p>
+            <div class="collapse ans" id="faq1">
+               <p>1. Provide the proper nutrients. Check the soil’s drainage efficiency. <br>
+                2. Adjust your watering schedule. Clean your pots and boxes. <br>
+               3. Remove old vegetation. <br>
+                4. Prevent compaction. <br>
+                5. Mulch your soil</p>
+            </div>
+        </div>
+        <hr>
+        <!--faq-2-->
+        <div class="faq">
+            <p class="mb-0">
+                <i class="fa fa-angle-double-right"></i>  How to prepare compost ?
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" >
+                <i class="fa fa-angle-down"></i>
+            </button>
+            </p>
+            <div class="collapse ans" id="faq2">
+               <p> 1. Use a pitchfork or other garden tools to rotate the compost materials every week or two to add oxygen and help the composting process. <br>
+                2. Water the compost regularly so it stays moist. <br>
+                3. The process should take a few months and should leave you with a dark, crumbly product that looks and smells like fresh soil. </p>
+            </div>
+        </div>
+        <hr>
+        <!--faq-3-->
+        <div class="faq">
+            <p class="mb-0">
+                <i class="fa fa-angle-double-right"></i>  What are the natural alternatives to fertilizers?
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" >
+                <i class="fa fa-angle-down"></i>
+            </button>
+            </p>
+            <div class="collapse ans" id="faq3">
+                <ul>
+                    <li>Fish emulsion fertilizers are made up of partially decomposed and pulverized fish, and contain NPK ratios of 2-4-1. Fish emulsion fertilizers should be applied in late spring and followed with a deep watering.</li>
+                    <li>Cottonseed meal is slightly acidic, typically containing a nitrogen-to-phosphorous-to-potassium (NPK) of 7-3-2. The nutrients in it are readily available to plants in warm soils, without the risk of nitrogen burn that is commonly associated with chemical fertilizers.</li>
+                    <li> Composted manure reduces potential health and environmental risks of applying fertilizers, and the compost contributes to more long-term soil fertility and health.</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <!--faq-4-->
+        <div class="faq">
+            <p class="mb-0">
+                <i class="fa fa-angle-double-right"></i>  How to increase annual crop yields?
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" >
+                <i class="fa fa-angle-down"></i>
+            </button>
+            </p>
+            <div class="collapse ans" id="faq4">
+               <p>1. If there is short time between two long period crops then grow short period crops <br>
+                  2. Sow only certified seed which have passed all necessary quality controls <br>
+                  3. Allow smart and minimal usage of fertilizers</p>
+            </div>
+        </div>
+        <hr>
+        <!--faq-5-->
+        <div class="faq">
+            <p class="mb-0">
+                <i class="fa fa-angle-double-right"></i>  What are the crops which take least time to grow?
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" >
+                <i class="fa fa-angle-down"></i>
+            </button>
+            </p>
+            <div class="collapse ans" id="faq5">
+                <p>1. Salad Leaves (Sowing to harvest: 21 days) <br>
+                    2. Radishes (Sowing to harvest: 25 days) <br>
+                    3. Spinach (Sowing to harvest: 30 days) <br>
+                    4. Carrots (Sowing to harvest: 50 days) <br>
+                    5. Bush beans (Sowing to harvest: 60 days) <br>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <!--faq-6-->
+        <div class="faq">
+            <p class="mb-0">
+                <i class="fa fa-angle-double-right"></i>  What are the most profitable crops to grow?
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" >
+                <i class="fa fa-angle-down"></i>
+            </button>
+            </p>
+            <div class="collapse ans" id="faq6">
+                <p>The following crops are considered most profitable due to price/pound, amount of water and labour required etc <br>
+                    1. Corn <br>
+                    2. Soyabeans<br>
+                    3. Wheat<br>
+                    4. Cotton<br>
+                    5. Rice<br>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <!--faq-7-->
+        <div class="faq">
+            <p class="mb-0">
+                <i class="fa fa-angle-double-right"></i>  What are the preferrable crops to grow in a particular season?
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" >
+                <i class="fa fa-angle-down"></i>
+            </button>
+            </p>
+            <div class="collapse ans" id="faq7">
+                <ul>
+                    <li>The cropping season in India starts in June and ends in October where monsoon crops are cultivated and harvested(Kharif season).
+                        Crops grown: rice, sorghum, maize, tea, rubber, coffee, guar, Sesame, cereals such as Arhar Dhal, pearl millet, soybeans, cotton, oilseeds, etc
+                        </li>
+                    <li>The season where crops are sown in mid-November and harvested in April/May is called Rabi Season. 
+                        Some important Rabi Crops are: wheat, oats, barley, pulses, cereals, oilseeds, linseed, etc.
+                       </li>
+                    <li>The Zaid crops, also called summer crops, are sown and harvested between March and June. 
+                        Some important Zaid Crops are:Pumpkin, Cucumber, Bitter Gourd, Seasonal fruits and vegetables</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <!--faq-8-->
+        <div class="faq">
+            <p class="mb-0">
+                <i class="fa fa-angle-double-right"></i>  What to control pests in crops?
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" >
+                <i class="fa fa-angle-down"></i>
+            </button>
+            <div class="collapse ans" id="faq8"> 
+                    <ul>
+                        <li>Control by Planting Pest Resistant Varieties : Interbreeding wild with cultivated variety, a strain can be evolved which yield good fruits and shall also will be immune to pests. <br>
+                        </li>
+                        <li>Clean cultivation : Clean cultivation means the removal of weeds, plant residues, and other materials from the fields and growing only healthy crops.</li>
+                        <li>Ploughing in Relation to Insect Control:
+
+                            The plough if used at right time is a good tool for combating many insect pests; it disturbs or kills them, eradicates weeds upon which they might feed and breed, exposes them to natural enemies or to weather control and buries them so deeply that few adults can emerge. </li>
+                        <li>Crop rotation : The changing of crops in a sequence decreases the population level of pests by <br> (1) interrupting pest life cycles, <br>(2) interrupting pest habitat.</li>
+                    </ul>
+                    
+                </p>
+            </div>
+        
+        <hr>
+        <!--faq-9-->
+        <div class="faq">
+            <p class="mb-0">
+                <i class="fa fa-angle-double-right"></i>  What are the crops suitable for cultivation based on the type of soil?
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" >
+                <i class="fa fa-angle-down"></i>
+            </button></p>
+            
+            <div class="collapse ans" id="faq9"> 
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Types of Soil</th>
+                            <th>Suitable Crops</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alluvial Soils</td>
+                            <td>The crops that are grown in alluvial soil are tobacco, rice, wheat, bajra, chickpea, soybean, cotton, mustard, groundnut, sesame, barley, maize, oilseeds, etc.</td>
+                        </tr>
+                        <tr>
+                            <td>Black Soil</td>
+                            <td>There is always a question regarding which soil is ideal for growing cotton. Black soil or cotton soil is good in moisture and hence is very suitable for growing cotton. <br> The other crops which can be grown in black soil are sugarcane, wheat, jawar, rice, citrus fruits, sunflower, linseed, etc. </td>
+                        </tr>
+                        <tr>
+                            <td>Red and Yellow Soil</td>
+                            <td>The crops suitable for red and yellow soil are maize, groundnut, rice, fruits like mango, orange, vegetables, potato, and pulses.</td>
+                        </tr>
+                        <tr>
+                            <td>Laterite Soil</td>
+                            <td>Laterite soil is useful for growing coffee, rubber, coconut, wheat cultivation, cotton, cashew, and rice cultivation. </td>
+                        </tr>
+                        <tr>
+                            <td>Forest Soil</td>
+                            <td>Crops grown in forest soil are tea, spices, barley, tropical fruits, wheat, maize, and coffee.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                    
+                
+            </div>
+        </div>
+    </div>
+  
+     <!--Tools-->
+     <div id="tools">
+        <div class="container mt-5">
+            <h1 class="my-3" >Agricultural tools</h1>
+            <p class="mb-3">Agriculture tools and equipment are the instruments used by farmers and growers to produce crops. The primary function of agriculture tools is to help farmers, farmworkers, and home gardeners perform tasks related to the cultivation of crops. In many countries worldwide, various types of agricultural tools, including modern technology and old ones, can be found.</p>
+        <div class="main row row-cols-1 row-cols-sm-2 row-cols-md-3  row-cols-lg-4 g-5 mb-5">
+            
+            <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/DjYAAOSwNg1fd6Kr/$_86.JPG" alt="">
+                    <div class="card-body">
+                        <h2>Plough</h2>
+                        <p> Plough is a tool for loosening or turning the soil before sowing seed or planting. Ploughs were traditionally drawn by oxen and horses, but now are drawn by tractors.  </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://th.bing.com/th/id/OIP.OQ7p7ah83yHypay6NztNXgHaEK?w=316&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
+                    <div class="card-body">
+                        <h2>Machette</h2>
+                        <p>This tool is composed of a handle and a long sharp steel blade.Machetes are useful for clearing dead plants at the end of harvest, or for removing weeds.</p>   
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://c8.alamy.com/comp/DEF6GP/farmer-using-hoe-hand-tool-farming-kitchen-garden-guipuzcoa-basque-DEF6GP.jpg" alt="">
+                    <div class="card-body">
+                        <h2>Hoe</h2>
+                        <p>  A hoe is an ancient and versatile agricultural and horticultural hand tool used to shape soil, remove weeds, clear soil, and harvest root crops.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://img.freepik.com/free-photo/farmers-hold-sickles-field_29084-2401.jpg?size=626&ext=jpg" alt="">
+                    <div class="card-body">
+                        <h2>Sickle</h2>
+                        <p>  A sickle is a single-handed agricultural tool designed with variously curved blades and typically used for harvesting, or reaping, grain crops or cutting succulent forage . 
+                            </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://www.scythecymru.co.uk/wp-content/uploads/2017/04/P4081519.jpg" alt="">
+                    <div class="card-body">
+                        <h2>Scythe</h2>
+                        <p> A scythe is an agricultural hand tool for mowing grass or harvesting crops.It consists of a long curved blade at the end of a long pole attached to one or two short handles.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://www.gearhungry.com/wp-content/uploads/bfi_thumb/tabor-tools-j62a-pick-mattock-2--6qymgvzzki5j2f3zo19elt3n8065hmktpoao7tl95lm.jpg" alt="">
+                    <div class="card-body">
+                        <h2>Pick Mattock</h2>
+                        <p> A pick mattock combines the function of a pick and adze, with a pointed end opposite an adze blade. Both are used for grubbing in hard soils and rocky terrain</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://th.bing.com/th/id/OIP.LO1sSbS8xI-ampnuGIRnpgHaE7?pid=ImgDet&w=1024&h=681&rs=1" alt="">
+                    <div class="card-body">
+                        <h2>Shovel</h2>
+                        <p>Shovel is a multi-purpose tool, serving various jobs at once. Shovel tool helps with digging and transplanting soil, making shallow trenches, and in removing dirt or debris.</p>  
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://th.bing.com/th/id/OIP.7RxijJr9PaDY7mw4e3uTeQHaD7?w=301&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
+    
+                    <div class="card-body">
+                        <h2>Wheelbarrow</h2>
+                        <p>A wheelbarrow is a small hand-propelled carrier, with only one wheel, intended to be pushed and guided by a single person using two handles from the back. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://www.farmpractices.com/wp-content/uploads/2019/04/Hand-operated-sprayers.jpg" alt="">
+    
+                    <div class="card-body">
+                        <h3>Backpack sprayer</h2>
+                        <p>  A backpack sprayer is a hand-operated sprayer carried on the farmer's back. These sprayers are used for spraying the pesticide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+           <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://th.bing.com/th/id/OIP.xTHhD3hEywSg-5OIYqm7wgHaE7?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
+                    <div class="card-body">
+                        <h2>Sprinkler</h2>
+                        <p>A sprinkler is a tool used to water farm products, yards, etc. For cooling and control of airborne tidy, the sprinkler is very useful. It allows uniform watering of the crop. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://d3lp4xedbqa8a5.cloudfront.net/imagegen/p/800/600/s3/digital-cougar-assets/momoads/2019/12/12/162527/Kanga-Stick-Rake---2.jpg" alt="">
+                    <div class="card-body">
+                        <h2>Rake</h2>
+                        <p>Rake is used majorly to remove the dead grass , losing the soil, land levelling and light weeding. They have long, stiff teeth to withstand abrasion & bending forces.</p>   
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://farmingmethod.com/wp-content/uploads/2018/06/tractor.jpg" alt="">
+                    <div class="card-body">
+                        <h2>Tractor</h2>
+                        <p> Tractors are used for ploughing, tilling & planting in addition to routine lawn care, landscape maintenance, moving or spreading fertiliser & clearing bushes.</p> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://farmingmethod.com/wp-content/uploads/2018/06/combine-harvester.jpg" alt="">
+                    <div class="card-body">
+                        <h2>Harvestor</h2>
+                        <p>Harvestor is a machine designed to efficiently harvest a variety of crops & combines operations like reaping, threshing, gathering, and winnowing to a single process.</p>   
+                    </div>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://th.bing.com/th/id/OIP.an8xckTwOMueM6E9kNoF-wHaE8?pid=ImgDet&rs=1" alt="">
+                    <div class="card-body">
+                        <h2>Baler</h2>
+                        <p>Baler is used to make bundles of cereal straw and other herbs in the field. Balers are also used for removing soil, opening ditches, transporting products, eliminating weeds.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card shadow h-100">
+                    <img src="https://foursite-pape-production.s3.amazonaws.com/agriculture.papemachinery.com/43df5ecf-17e9-4f54-8d4f-4493510de659.jpg" alt="">
+                    <div class="card-body">
+                        <h2>Planters</h2>
+                        <p> The planters are normally tugged behind a tractor as an extension. Planters are useful to saw crop seeds (like vegetable seeds, corn, and legumes) in the field. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card shadow">
+                    <img src="https://equipment-api.teamsi.com/images/b/b95d80daea777d8cdd47d64f7f054f7954d9d33f.jpg/_jcr_content/renditions/original
+                    " alt="">
+                    <div class="card-body h-100">
+                        <h3>Manure spreader</h2>
+                        <p> A manure spreader is a agricultural machine used to distribute manure over a field as a fertilizer.It saves time as well as reduces man-power . 
+                        </p>
+                    </div>
+                </div>
+            </div>
+     
+            
+           </div>
+        </div>
+    </div>
+
+    <!--schemes-->
+    <div id="schemes">
+        <div class="container">
+            <h1>Government Schemes</h1>
+            <p>The Governent of India has launched a number of schemes that favors the farmers and agricultural sectors. The main aim of the 
+                government is to promote farming sector to help improve their economic conditions. Under the new initiative the government has 
+                also introduced a number of beneficiary schemes including e-NAM (National Agricultural Market), PMKSY(Pradhan Mantri Krishi Sinchayee 
+                Yojana), PKVY( Paramparagat Krishi Vikas Yojana), Interest Subvention scheme and PMFBY( Pradhan Mantri Fasal Bima Yojana).
+            </p>
+            <ol>
+                <!--1-->
+                <li>
+                    <h4>Soil Health Card Scheme</h3>
+                    <ul>
+                        <li>
+                            The scheme was introduced in 2015 and aimed at providing farmers with health cards for soil. The farmers under this scheme could upload the soil quality and nutrients.
+                        </li>
+                        <li>
+                            This information could be used by them for improving the soil condition for better quality crop fertility. Under this scheme government had collected soil samples from 253 lakh farm locations. Till date over 76 percent health cards have already been distributed by the authorities.
+                        </li>
+                    </ul>
+                </li>
+                <!--2-->
+                <li>
+                    <h4>NCU (Neem Coated Urea)</h3>
+                    <ul>
+                        <li>
+                            The scheme was launched by the government to promote use of organic urea to preserve soil health and yield better crop. The urea was made rich in nitrogen source for crops. Under this scheme farmers are only making use of Neem coated organic urea to cut down savings by around 10 percent.
+                        </li>
+                    </ul>
+                </li>
+                <!--3-->
+                <li>
+                    <h4>PKVY (Paramparagat Krishi Vikas Yojana)</h3>
+                    <ul>
+                        <li>
+                            The government had implemented this scheme within the country to help promote the ideal of organic farming amongst the farmers. This would further help the farmers to earn better profits from farm lands.
+                        </li>
+                        <li>
+                            The government aims at covering over 5 lakh acres of farm land by the year 2015 – 2018 under this scheme in clusters of50 acres land each.
+                        </li>
+                    </ul>
+                </li>
+                <!--4-->
+                <li>
+                    <h4>PMKSY (Pradhan Mantri Krishi Sinchaye Yojna)</h3>
+                    <ul>
+                        <li>
+                            The scheme was introduced by the government on 2015 July 1st. under this scheme the government aims at providing with each farm land with irrigation water supply.
+                        </li>
+                        <li>
+                            To better implement the scheme the government aimed at reducing the wastage of water during irrigation by making use of rain water harvest techniques.
+                        </li>
+                        <li>
+                            The government also implemented the idea of micro irrigation facility for farmers to help reduce the overall cost. The government has also managed to cover 8.39 lakh ha under this scheme so far.
+                        </li>
+                    </ul>
+                </li>
+                <!--5-->
+                <li>
+                    <h4>e-NAM (National Agriculture Market)</h3>
+                    <ul>
+                        <li>
+                            Under this scheme the government took the initiative of creating e-market places for regulating market prices. The platform offer farmers with controlled price for their produce and other agricultural farm equipments.
+                        </li>
+                        <li>
+                            The government has also managed to integrate over 400 markets under this scheme till 2017. Present it aims at linking over 47.95 lakh farmers and 91500 traders to share the common platform.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <!--practices-->
+    <div id="prac"><!--horizontal card-->
+        <h1>Sustainable Agricultural Practices</h1>
+        <!--Crop rotation-->
+        <div class="container">
+            <div class="card mx-2 my-5">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-md-5 col-lg-5"><img  width=440px height=300px src="https://usfarmersandranchers.org/wp-content/uploads/2020/06/benefits-of-crop-rotation-hero.jpg" alt=""></div>
+                        <div class="col-md-7 col-lg-7 my-2">
+                            <h2 class="text-success">CROP ROTATIONS</h2>
+                            <p >
+                                Crop rotation is the practice of planting different crops sequentially on the same plot of land to improve soil health, optimize nutrients in the soil, and combat pest and weed pressure.
+                                Say a farmer has planted a field of corn. When the corn harvest is finished, he might plant beans, since corn consumes a lot of nitrogen and beans return nitrogen to the soil.
+                                If a farmer plants the exact same crop in the same place every year,she continually draws the same nutrients out of the soil. Pests and diseases happily make themselves a 
+                                permanent home as their preferred food source is guaranteed.
+                                Crop rotation helps return nutrients to the soil without synthetic inputs.
+                                The practice also works to interrupt pest and disease cycles,increase biodiversity on the farm.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Cover crops-->
+        <div class="container">
+            <div class="card mx-2 my-5">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 my-2">
+                            <h2 class="text-success">COVER CROPS</h2>
+                            <p >
+                                Cover crops are different from cash crops, which are those that a farmer sells for profit, such as corn or soybeans.
+                                Cover crops’ primary job is to improve the soil. They get planted in fields that would otherwise be bare—in between growing seasons, for example—to protect the soil from erosion and nutrient loss.
+                                Cover crops also help smother weeds, control pests and diseases, enhance water availability, and increase biodiversity on the farm. Conventional farmers rely on synthetic fertilizers and chemical 
+                                herbicides to return nutrients to their soils and fight weeds. Cover crops come to rescue.
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-lg-6"><img width=100% height=290px src="https://www.sare.org/wp-content/uploads/pg4-NRCSAL12292-768x499.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Intercropping-->
+        <div class="container">
+            <div class="card mx-2 my-5">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6"><img width=100% height=100% src="https://eos.com/wp-content/uploads/2020/11/row-cropping.jpg" alt=""></div>
+                        <div class="col-md-6 col-lg-6 my-2">
+                            <h2 class="text-success">INTERCROPPING</h2>
+                            <p >
+                                Intercropping is the practice of growing two or more crops in proximity. The most common goal of intercropping is to produce a greater yield on a given piece of land by making use of resources that would otherwise not be utilized by a single crop.
+                                The major benefits of intercropping are:
+                                <ul>
+                                <li> Added nutrients for the main crop </li>
+                                <li> controlling weeds </li>
+                                <li>Increased Profit</li>
+                                <li>More efficient use of natural resources</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Vermicomposting-->
+        <div class="container">
+            <div class="card mx-2 my-5">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 my-2">
+                            <h2 class="text-success">VERMICOMPOSTING</h2>
+                            <p >
+                                Vermicomposting is a natural process whereby earthworms convert waste material with rigid structures into compost.
+                                Vermicompost is a nutrient-rich fertilizer as well as a soil conditioner. It has been shown to increase plant growth and yield as well as suppressing key pests and diseases of horticultural plants in the greenhouse and in field soils. 
+                                Vermicompost is generally of finer structure, contains more plant available nutrients, has higher microbial activity, and possesses better plant growth promoting properties than conventionally produced thermophilic compost.
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-lg-6"><img width=100% height=300px src="https://rodaleinstitute.org/wp-content/uploads/Vermicomposting-for-beginners-2.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Contour ploughing-->
+        <div class="container">
+            <div class="card mx-2 my-5">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-md-5 col-lg-5"><img width=430px height=270px src="https://images.tractorgyan.com/uploads/26860/630872897197e_contour-farming-1.webp" alt=""></div>
+                        <div class="col-md-7 col-lg-7 my-2">
+                            <h2 class="text-success">CONTOUR PLOUGHING</h2>
+                            <p >
+                                Contour ploughing is the practice of following the contours of the land when ploughing. This method is used to prevent soil erosion and 
+                                to make the most of the land’s potential.Contour ploughing is especially important at the beginning of the rainy season when biological conservation effects are poor. The benefits of contour ploughing include:
+                                <ul>
+                                    <li>Reduced water runoff</li>
+                                    <li>Increased production</li>
+                                    <li>Improved soil quality and fertility</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!--Agroforestry-->  
+        <div class="container">
+            <div class="card mx-2 my-5">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 my-2">
+                            <h2 class="text-success">AGROFORESTRY</h2>
+                            <p >
+                                Agroforestry integrates crops, trees and livestock in the same area and at the same time. 
+                                Together these components can create long-lasting sustainable farming practices which can provide 
+                                short-, medium-, and long-range economic, environmental and social benefits for farmers.
+                                Agroforestry systems have the potential to be more beneficial than traditional agriculture and forest production practices. They may be able to give 
+                                enhanced productivity, as well as social, economic, and environmental advantages, as well as a broader variety of ecological products and services.
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-lg-6"><img width=450px height=300px src="https://forestrypedia.com/wp-content/uploads/2018/06/agroforestry-tree-1.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Rotational Grazing-->
+        <div class="container">
+            <div class="card mx-2 my-5">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-md-5 col-lg-5"><img width=430px height=270px src="https://rodaleinstitute.org/wp-content/uploads/rotational-grazing-goats-1024x681.jpg" alt=""></div>
+                        <div class="col-md-7 col-lg-7 my-2">
+                            <h2 class="text-success">ROTATIONAL GRAZING</h2>
+                            <p >
+                                Rotational grazing is the practice of containing and moving animals through pasture to improve soil, plant, and animal health.
+                                Left alone on a patch of land, animals like cattle and hogs can quickly destroy all signs of life, compacting the soil as they go. However, 
+                                if the animals are managed with rotational grazing, the soil sees big returns. Grazing encourages plants to send out more and deeper roots. 
+                                Those roots are continually sloughed off to decompose in the ground, boosting soil biomass and fertility and sequestering carbon from the atmosphere. 
+                                Rotational grazing also helps prevent erosion and agriculture runoff.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> </div>
+   
+    
+    
+    <!--footer-->
+   <div class="my-3 px-2 footer">
+    <h3 >Happy farming!!!</h3>
+   </div>
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

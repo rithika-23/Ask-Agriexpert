@@ -1,0 +1,121 @@
+.img_{
+    height: 500px;
+}
+.ans{
+    margin-left: 50px;
+}
+.faq{
+    color: rgb(64, 135, 76);
+    font-weight: 500;
+}
+.ans{
+    color:black;
+    font-weight: 400;
+}
+.factors{
+    text-align: center;
+    margin-top: 25px;
+
+}
+table{
+    margin-top: 100px;
+    width: 700px;
+    text-align: center;
+    margin: auto;
+    
+}
+.footer{
+    background-image: url(https://jooinn.com/images/subtle-green-grunge-texture.jpg);
+}
+table, th, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+color: black;
+}
+h5{
+    padding-top: 5px;
+}
+.steps{
+    font-size: smaller;
+}
+h3,h2{
+    text-align: center;
+    color: rgb(1, 75, 1);
+    font-family: 'DynaPuff', cursive;
+}
+button{
+    background-color: rgb(1, 75, 1);
+    color: white;
+    border-radius: 5%;
+    border:2px solid rgb(160, 237, 160)
+}
+
+
+/*tools*/
+#tools .card{
+    width: 250px;
+    margin: auto;
+}
+
+#tools h1,h2,h3{
+    font-family: 'DynaPuff', cursive;
+    color: rgb(49, 84, 55);
+}
+#tools img{
+    height: 150px;
+}
+#tools{
+    background-image: url(https://jooinn.com/images/subtle-green-grunge-texture.jpg);
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+
+
+/*practices*/
+#prac{
+    color: rgb(1, 75, 1);
+    font-family: 'DynaPuff', cursive;
+    background-color:#d1f9d1;
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+#prac h2{
+    font-weight: bold;
+    color: rgb(58, 79, 58);
+}
+#prac img{
+    border-radius: 5px;
+    border: 2px solid rgb(48, 71, 46);
+    padding: 2px;
+    margin: 5px 0px;
+}
+#prac h1{
+    text-align: center;
+    margin-top: 25px;
+    text-decoration: underline;
+    color: rgb(2, 69, 2);
+}
+
+/*schemes*/
+#schemes{
+     
+    font-family: 'PT Sans', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#schemes h4{
+    text-align: left;
+}
+#schemes h1{
+    text-align: center;
+    color: green;
+    font-weight: lighter;
+    
+    font-family: 'DynaPuff', cursive;
+}
+#schemes h4{
+    color: green;
+   
+    font-family: 'DynaPuff', cursive;
+}
